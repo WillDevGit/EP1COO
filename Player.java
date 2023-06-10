@@ -2,6 +2,14 @@
  * Classe que contém informações e ações básicas relacionadas aos jogadores
  */
 public class Player {
+    
+    String name; 
+    Color pieceColor; 
+    Card[] card; 
+
+
+   
+
     /**
      * Construtor que define informações básicas do jogador
      * @param name Nome do jogador
