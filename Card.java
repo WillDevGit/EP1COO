@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Classe que contém informações das cartas
@@ -17,6 +18,20 @@ public class Card {
                 ", color=" + color +
                 ", positions=" + Arrays.toString(positions) +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(this == o) {
+        return true; 
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        Card x = (Card) o;
+        return color == x.color && Objects.equals(name, x.name); 
     }
 
     /**
